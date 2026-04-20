@@ -124,13 +124,4 @@ Follow these steps to run the application securely on your local development ser
 
 ---
 
-## 💻 Application Interfaces
 
-#### Application Input Interface
-<img width="894" alt="app_index" src="https://github.com/customer-churn-prediction-application/assets/83907520/e5be6059-f61b-4bf2-88c5-d3da29734bc9">
-
-#### Application Results Interface
-<img width="863" alt="app_results" src="https://github.com/customer-churn-prediction-application/assets/83907520/e967352b-fc5f-4f34-8baa-1dc867d57f4c">
-
----
-*Note: This platform and its documentation have been optimized for production and demonstration fidelity.*
