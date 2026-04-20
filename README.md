@@ -1,14 +1,45 @@
-# Customer Churn Prediction Application
+# Customer Churn Prediction Application 🚀
 
-### Case Study of Customer Churn Prediction Model
-Creating churn prediction models involves using historical customer data to predict the likelihood of the current customer leaving or continuing with a particular service/product. The data used for the predictive models include product usage data and direct customer feedback. Besides, the predictive models identify the different trends and patterns in the data to forecast customer churn.
+An end-to-end Machine Learning platform designed to predict e-commerce customer churn. Featuring a robust Flask backend and an interactive web UI, the system analyzes behavioral metrics like tenure, satisfaction, and order history to generate real-time risk probabilities, empowering businesses to drive proactive and data-driven retention strategies.
 
-Consider an e-commerce company with historical data on how their clients have interacted with their services. The company wants to know the likelihood of customers churning so they can launch targeted marketing campaigns.
+---
 
-[Dataset source](https://www.kaggle.com/datasets/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction/data)
+## 📌 Table of Contents
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Technology Stack](#technology-stack)
+- [Dataset Information](#dataset-information)
+- [Project Structure](#project-structure)
+- [Installation & Setup](#installation--setup)
+- [Application Interfaces](#application-interfaces)
 
+---
 
-The data is in .xlsx format with the following features:
+## 🌐 Overview
+Creating accurate churn prediction models involves using historical customer interaction data to forecast the likelihood of a customer leaving a service or platform. This application focuses on an e-commerce case study where predicting customer churn allows the business to launch highly targeted marketing campaigns and optimize resource allocation.
+
+---
+
+## ✨ Key Features
+- **Real-Time Inference Engine**: Instantly calculates churn probabilities via a pre-trained Scikit-learn model.
+- **Dynamic Web Interface**: Clean, responsive, Bootstrap-powered HTML forms for easy metric input.
+- **One-Hot Metadata Mapping**: Automatically processes and maps categorical inputs into model-ready numerical formats via a robust `.json` schema.
+- **Server API**: Server-side processing utilizing Python and Flask to validate incoming POST requests and execute algorithmic predictions.
+
+---
+
+## 🛠️ Technology Stack
+- **Backend**: Python 3.13, Flask, Werkzeug
+- **Machine Learning**: Scikit-learn, Pandas, NumPy
+- **Frontend**: HTML5, CSS3, Bootstrap 4
+- **Serialization**: Pickle (`.pkl` Model Weights), JSON (`.json` Feature Schema)
+
+---
+
+## 📊 Dataset Information
+[**Original Dataset Source Explorer**](https://www.kaggle.com/datasets/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction/data)
+
+The predictive model was trained on historical e-commerce interactions containing the following features:
 
 | Feature Name               | Description                                                                        |
 |----------------------------|------------------------------------------------------------------------------------|
@@ -32,10 +63,74 @@ The data is in .xlsx format with the following features:
 | DaySinceLastOrder          | Number of days since the customer’s last order                                     |
 | CashbackAmount             | Average cashback received by the customer in the last month                        |
 
+---
 
+## 📂 Project Structure
+
+```text
+customer-churn-prediction-application/
+│
+├── end_to_end_deployment/
+│   ├── app.py                     # Main Flask Application controller
+│   ├── requirements.txt           # Python environment dependencies
+│   ├── models/
+│   │   ├── churn_prediction_model.pkl # Serialized Machine Learning Model
+│   │   └── columns.json           # Data schema for one-hot mapping
+│   ├── static/
+│   │   └── img/                   # Static assets and icons
+│   └── templates/                 # HTML5 UI components
+│       ├── index.html             # Client-side data input form
+│       └── result.html            # Server-rendered prediction dashboard
+├── README.md                      # Detailed project documentation
+└── requirements.txt               # Updated python 3.13 dependencies
+```
+
+---
+
+## 🚀 Installation & Setup
+
+Follow these steps to run the application securely on your local development server:
+
+1. **Navigate to the Directory**:
+   Open your terminal/command prompt and ensure you are in the project root:
+   ```bash
+   cd customer-churn-prediction-application
+   ```
+
+2. **Create a Virtual Environment**:
+   It is highly recommended to use a virtual environment to manage dependencies:
+   ```bash
+   python -m venv .venv
+   # Windows:
+   .venv\Scripts\activate
+   # Mac/Linux:
+   source .venv/bin/activate
+   ```
+
+3. **Install Dependencies**:
+   Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Launch the Flask Server**:
+   Start the application:
+   ```bash
+   python end_to_end_deployment/app.py
+   ```
+
+5. **Interact via Web Browser**:
+   Open a browser (Chrome, Firefox, etc.) and navigate to the local development server: `http://127.0.0.1:5000`
+
+---
+
+## 💻 Application Interfaces
 
 #### Application Input Interface
-<img width="894" alt="app_index" src="https://github.com/AllanOuko/customer-churn-prediction-application/assets/83907520/e5be6059-f61b-4bf2-88c5-d3da29734bc9">
+<img width="894" alt="app_index" src="https://github.com/customer-churn-prediction-application/assets/83907520/e5be6059-f61b-4bf2-88c5-d3da29734bc9">
 
 #### Application Results Interface
-<img width="863" alt="app_results" src="https://github.com/AllanOuko/customer-churn-prediction-application/assets/83907520/e967352b-fc5f-4f34-8baa-1dc867d57f4c">
+<img width="863" alt="app_results" src="https://github.com/customer-churn-prediction-application/assets/83907520/e967352b-fc5f-4f34-8baa-1dc867d57f4c">
+
+---
+*Note: This platform and its documentation have been optimized for production and demonstration fidelity.*

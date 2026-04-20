@@ -6,10 +6,15 @@ import json
 app = Flask(__name__)
 
 def churn_prediction(tenure, citytier, warehousetohome, gender, hourspendonapp, numberofdeviceregistered, satisfactionscore, maritalstatus, numberofaddress, complain, orderamounthikefromlastyear, couponused, ordercount, daysincelastorder, cashbackamount):
-    with open('end_to_end_deployment/models/churn_prediction_model.pkl', 'rb') as f:
+    import os
+    base_dir = os.path.dirname(__file__)
+    model_path = os.path.join(base_dir, 'models', 'churn_prediction_model.pkl')
+    columns_path = os.path.join(base_dir, 'models', 'columns.json')
+
+    with open(model_path, 'rb') as f:
         model = pickle.load(f)
 
-    with open("end_to_end_deployment/models/columns.json", "r") as f:
+    with open(columns_path, "r") as f:
         data_columns = json.load(f)['data_columns']
 
     input_data = [
